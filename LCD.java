@@ -1,9 +1,28 @@
 //wikihow least common denominator
 public class LCD {
     public static void main (String[] args) {
-        //enter numerator 1, enter denom one
-        //enter numerator 2 enter denom 2
+        int denom1 = 36; // Hard coded - will need to change to user input later.
+        int denom2 = 48;
+
+        int lcd = leastCD(denom1, denom2);
+        System.out.println("The least common denominator of " + denom1 + " and " + denom2 + " is: " + lcd);
     }//end main
+    
+// Method to find the least common denominator using GCD
+public static int leastCD(int denom1, int denom2) {
+    return Math.abs(denom1 * denom2) / gcd(denom1, denom2);  // math absolute value https://www.turing.com/kb/java-absolute-value
+}
+
+// Recursive method to find the greatest common divisor
+public static int gcd(int a, int b) {  // receives a and b as denom1 and denom2
+    // Base case: if b is 0, gcd is a 
+    if (b == 0) {
+        return a;
+    }
+    // Recursive case: gcd(a, b) = gcd(b, a % b)
+    return gcd(b, a % b);
+}
+
     public static int leastCommonDenom(int denom1, int denom2) {
         int lcd = 0;
         //limit is denom1*denom2
@@ -61,4 +80,7 @@ public class LCD {
             return highestNum; //if none of them match, returnt the highest multiple
         }//end if else
     }//end leastCommonDenom method
+
+
+
 }//end class LCM
