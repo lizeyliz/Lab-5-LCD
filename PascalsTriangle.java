@@ -2,19 +2,21 @@
 //https://www.geeksforgeeks.org/java-program-to-print-pascals-triangle/
 //Use nCr formula
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class PascalsTriangle {
     public static void main(String[] args) {
 
         // Printing Pascal's Triangle
-        System.out.println("4 factorial: " + factorial(4));
-        System.out.println("Row one: " + nCR(0, 0));
-        System.out.println("Row two: " + nCR(1, 0) + ", " + nCR(1, 1));
-        System.out.println(nCR(3, 3));
-        pascalVals();
-        // Pascal's Triangle number of rows we want to print
-        // Hardcoding to 5 for now.
-        int numRows = 5;
+        //System.out.println("4 factorial: " + factorial(4));
+        //System.out.println("Row one: " + nCR(0, 0));
+        //System.out.println("Row two: " + nCR(1, 0) + ", " + nCR(1, 1));
+        //System.out.println(nCR(3, 3));
+        //pascalVals();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("How many rows of Pascal's Triangle do you want to print?: ");
+        int numRows = sc.nextInt();
 
         for (int n = 0; n < numRows; n++) {
             // printing spaces
