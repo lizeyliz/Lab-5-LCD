@@ -1,4 +1,4 @@
-
+//see readme
 import java.util.Scanner;
 
 public class LCD {
