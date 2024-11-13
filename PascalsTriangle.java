@@ -7,20 +7,8 @@ public class PascalsTriangle {
         Scanner sc = new Scanner(System.in);
         System.out.print("How many rows of Pascal's Triangle do you want to print?: ");
         int numRows = sc.nextInt();
-
-        //put into method
-        for (int n = 0; n < numRows; n++) {
-            // printing spaces
-            for (int spaces = 0; spaces < numRows - n - 1; spaces++) {
-                System.out.print(" ");
-            } // end of first inner for loop
-
-            // printing values
-            for (int r = 0; r <= n; r++) {
-                System.out.print(nCR(n, r) + " ");
-            } // end of second inner for loop
-            System.out.println(); // newline
-        } // end of outer for loop
+        //print the triangle with number of rows user picked
+        printTriangle(numRows);
     }// end main
 
     // Method to calculate factorial of a number using RECURSION.
@@ -35,4 +23,20 @@ public class PascalsTriangle {
     public static int nCR(int n, int r) {
         return factorial(n) / (factorial(r) * factorial(n - r)); // Order of operations.
     }//end nCR
+
+    //print triangle
+    public static void printTriangle(int numRows){
+        for (int n = 0; n < numRows; n++) {
+            // printing spaces
+            for (int spaces = 0; spaces < numRows - n - 1; spaces++) {
+                System.out.print(" ");
+            } // end of first inner for loop
+
+            // printing values
+            for (int r = 0; r <= n; r++) {
+                System.out.print(nCR(n, r) + " ");
+            } // end of second inner for loop
+            System.out.println(); // newline
+        } // end of outer for loop
+    }//end printTriangle
 }//end class PascalsTriangle
