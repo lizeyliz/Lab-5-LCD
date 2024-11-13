@@ -5,23 +5,25 @@ public class LCD {
         //initialize (make array?)
         Scanner scan = new Scanner(System.in);
         int userInt = 1;
-        int num1;
+        /*int num1;
         int denom1;
         int num2;
-        int denom2;
+        int denom2;*/
+
+        int[] fractions = new int[4];
 
         //get user input (make own method?)
         while (userInt != 0) {
             System.out.println("Enter numerator for first fraction:");
-            num1 = scan.nextInt();
+            fractions[0] = scan.nextInt();
             System.out.println("Enter denominator for first fraction:");
-            denom1 = scan.nextInt();
+            fractions[1] = scan.nextInt();
             System.out.println("Enter numerator for second fraction:");
-            num2 = scan.nextInt();
+            fractions[2] = scan.nextInt();
             System.out.println("Enter denominator for second fraction:");
-            denom2 = scan.nextInt();
+            fractions[3] = scan.nextInt();
 
-            printLCD(denom1, num1, denom2, num2);
+            printLCD(fractions[0], fractions[1], fractions[2], fractions[3]);
             System.out.println("Enter any number to continue, or enter 0 to quit.");
             userInt = scan.nextInt();
         }//end while loop
@@ -44,7 +46,7 @@ public class LCD {
     }// end gcd
 
     //print Least Common Denominator
-    public static void printLCD(int denom1, int num1, int denom2, int num2) {
+    public static void printLCD(int num1, int denom1, int num2, int denom2) {
         int lcd = leastCD(denom1, denom2);
         System.out.println("The least common denominator of " + num1 + "/" + denom1 +
                 " and " + num2 + "/" + denom2 + " is: " + lcd);
