@@ -1,8 +1,8 @@
 # Lab-5-LCD
 
-Abby, Aliza, and Ro
-CS 145 8am
-Date: 11/13/2024
+- Abby, Aliza, and Ro
+- CS 145 8am
+- Date: 11/13/2024
 
 ## Purpose
 
