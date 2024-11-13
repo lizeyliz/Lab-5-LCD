@@ -5,25 +5,15 @@ public class LCD {
         //initialize (make array?)
         Scanner scan = new Scanner(System.in);
         int userInt = 1;
-        /*int num1;
-        int denom1;
-        int num2;
-        int denom2;*/
-
         int[] fractions = new int[4];
 
         //get user input (make own method?)
         while (userInt != 0) {
-            System.out.println("Enter numerator for first fraction:");
-            fractions[0] = scan.nextInt();
-            System.out.println("Enter denominator for first fraction:");
-            fractions[1] = scan.nextInt();
-            System.out.println("Enter numerator for second fraction:");
-            fractions[2] = scan.nextInt();
-            System.out.println("Enter denominator for second fraction:");
-            fractions[3] = scan.nextInt();
-
+            //set fractions to user input
+            fractions = getFractions(scan, fractions);
+            //print results
             printLCD(fractions[0], fractions[1], fractions[2], fractions[3]);
+            //looping
             System.out.println("Enter any number to continue, or enter 0 to quit.");
             userInt = scan.nextInt();
         }//end while loop
@@ -44,6 +34,20 @@ public class LCD {
           // Recursive case: gcd(a, b) = gcd(b, a % b)
         return gcd(b, a % b);
     }// end gcd
+
+    //get numerator and denominator values from user and add to array
+    public static int[] getFractions(Scanner scan, int[] fractions) {
+        System.out.println("Enter numerator for first fraction:");
+        fractions[0] = scan.nextInt();
+        System.out.println("Enter denominator for first fraction:");
+        fractions[1] = scan.nextInt();
+        System.out.println("Enter numerator for second fraction:");
+        fractions[2] = scan.nextInt();
+        System.out.println("Enter denominator for second fraction:");
+        fractions[3] = scan.nextInt();
+
+        return fractions;
+    }//end getFractions
 
     //print Least Common Denominator
     public static void printLCD(int num1, int denom1, int num2, int denom2) {
