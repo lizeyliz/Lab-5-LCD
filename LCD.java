@@ -2,12 +2,12 @@ import java.util.Scanner;
 //see readme
 public class LCD {
     public static void main(String[] args) {
-        //initialize (make array?)
+        //initialize
         Scanner scan = new Scanner(System.in);
         int userInt = 1;
         int[] fractions = new int[4];
 
-        //get user input (make own method?)
+        //get user input
         while (userInt != 0) {
             //set fractions to user input
             fractions = getFractions(scan, fractions);
