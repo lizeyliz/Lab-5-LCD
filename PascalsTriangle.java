@@ -1,6 +1,5 @@
-//see readme
 import java.util.Scanner;
-
+//see readme
 public class PascalsTriangle {
     public static void main(String[] args) {
         //user input

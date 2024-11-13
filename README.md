@@ -12,6 +12,7 @@ Use recursion to find least common denominator AND use recursion to print Pascal
 
 - wikihow least common denominator
 - <https://www.geeksforgeeks.org/java-program-to-print-pascals-triangle/>
+- math absolute value <https://www.turing.com/kb/java-absolute-value>
 
 ## Bonus Points
 

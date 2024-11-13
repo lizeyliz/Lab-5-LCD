@@ -1,8 +1,8 @@
-//see readme
 import java.util.Scanner;
-
+//see readme
 public class LCD {
     public static void main(String[] args) {
+        //initialize (make array?)
         Scanner scan = new Scanner(System.in);
         int userInt = 1;
         int num1;
@@ -10,6 +10,7 @@ public class LCD {
         int num2;
         int denom2;
 
+        //get user input (make own method?)
         while (userInt != 0) {
             System.out.println("Enter numerator for first fraction:");
             num1 = scan.nextInt();
@@ -23,13 +24,12 @@ public class LCD {
             printLCD(denom1, num1, denom2, num2);
             System.out.println("Enter any number to continue, or enter 0 to quit.");
             userInt = scan.nextInt();
-        }
+        }//end while loop
         System.out.println("Goodbye!");
     }// end main
 
     // Method to find the least common denominator using GCD
     public static int leastCD(int denom1, int denom2) {
-        // math absolute value https://www.turing.com/kb/java-absolute-value
         return Math.abs(denom1 * denom2) / gcd(denom1, denom2);
     }// end least CD
 
@@ -43,6 +43,7 @@ public class LCD {
         return gcd(b, a % b);
     }// end gcd
 
+    //print Least Common Denominator
     public static void printLCD(int denom1, int num1, int denom2, int num2) {
         int lcd = leastCD(denom1, denom2);
         System.out.println("The least common denominator of " + num1 + "/" + denom1 +
