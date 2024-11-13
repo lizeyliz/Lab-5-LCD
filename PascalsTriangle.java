@@ -1,23 +1,14 @@
 
-//https://www.geeksforgeeks.org/java-program-to-print-pascals-triangle/
-//Use nCr formula
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class PascalsTriangle {
     public static void main(String[] args) {
 
-        // Printing Pascal's Triangle
-        //System.out.println("4 factorial: " + factorial(4));
-        //System.out.println("Row one: " + nCR(0, 0));
-        //System.out.println("Row two: " + nCR(1, 0) + ", " + nCR(1, 1));
-        //System.out.println(nCR(3, 3));
-        //pascalVals();
-
         Scanner sc = new Scanner(System.in);
         System.out.print("How many rows of Pascal's Triangle do you want to print?: ");
         int numRows = sc.nextInt();
 
+        //put into method
         for (int n = 0; n < numRows; n++) {
             // printing spaces
             for (int spaces = 0; spaces < numRows - n - 1; spaces++) {
@@ -36,18 +27,6 @@ public class PascalsTriangle {
 
     // one method for calculating values, one method for displaying value
 
-    // find Pascal values using iteration
-    public static void pascalVals() {
-        // 4 rows of values, put in array
-        int[] pascalVals = new int[10];
-        int index = 0;
-        for (int n = 0; n <= 3; n++) {
-            for (int r = 0; r <= n; r++) {
-                System.out.println("Row " + (n + 1) + ": " + nCR(n, r));
-            }
-        }
-    }
-
     // Method to calculate factorial of a number using RECURSION.
     public static int factorial(int i) {
         if (i == 0) { // base case
@@ -56,7 +35,7 @@ public class PascalsTriangle {
         return i * factorial(i - 1);
     }// end factorial RECURSION
 
-    // broken (3C3) fix
+    //nCr formula
     public static int nCR(int n, int r) {
         // return factorial(n)/factorial(n-r)*factorial(r);
         return factorial(n) / (factorial(r) * factorial(n - r)); // Order of operations.

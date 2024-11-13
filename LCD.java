@@ -1,5 +1,4 @@
 
-//wikihow least common denominator
 import java.util.Scanner;
 
 public class LCD {
